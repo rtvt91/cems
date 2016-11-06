@@ -1,5 +1,6 @@
 # C[E]MS
-A simple content [editable] management system which use angularjs, nodejs, mongodb.
+A simple content [editable] management system with content-editable text and canvas image modification.
+The app is built with angularjs, nodejs, mongodb.
 A gulp process is provided to launch/reset the application.
 
 # Run the application
