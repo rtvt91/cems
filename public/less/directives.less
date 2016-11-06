@@ -1,0 +1,474 @@
+
+/*
+* Variables
+*/
+
+@circle-login-background:#337ab7;
+@circle-login-typo: white;
+@circle-login-shadow:#337ab7;
+
+@circle-logout-background: #e0e0e0;
+@circle-logout-typo: #adadad;
+@circle-logout-shadow:#a5a5a5;
+
+/*
+* Functions
+*/
+
+.box-shadow(@color) {
+    -moz-box-shadow: 0px 2px 3px 0px @color;
+    -webkit-box-shadow: 0px 2px 3px 0px @color;
+    -o-box-shadow: 0px 2px 3px 0px @color;
+    box-shadow: 0px 2px 3px 0px @color;
+}
+
+.article-shadow(){
+    position:relative;       
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    &:before, &:after{
+        content:"";
+        position:absolute; 
+        z-index:-1;
+        -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
+        -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
+        box-shadow:0 0 20px rgba(0,0,0,0.8);
+        top:10px;
+        bottom:10px;
+        left:0;
+        right:0;
+        -moz-border-radius:100px / 10px;
+        border-radius:100px / 10px;
+    } 
+    &:after{
+        right:10px; 
+        left:auto;
+        -webkit-transform:skew(8deg) rotate(3deg); 
+        -moz-transform:skew(8deg) rotate(3deg);     
+        -ms-transform:skew(8deg) rotate(3deg);     
+        -o-transform:skew(8deg) rotate(3deg); 
+        transform:skew(8deg) rotate(3deg);
+    }  
+}
+
+.clearfix() {
+    &:before,
+    &:after {
+        content: " ";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+/*
+* Directives
+*/
+
+div[ui-view]{
+    padding: 20px;
+}
+
+banner{
+    display: block;
+    width: 100%;
+    background-color: black;
+     #circle{
+        margin: 10px;
+        z-index: 200;
+        width: 30px;
+        height: 30px;
+        -moz-border-radius: 60px;
+        -webkit-border-radius: 60px;
+        border-radius: 60px;
+        text-align: center;
+        display: inline-block;
+        padding-top: 5px;
+        cursor: pointer;
+        &.logout{
+            .box-shadow(@circle-logout-shadow);
+            background:@circle-logout-background;
+            color:@circle-logout-typo;
+        }
+        &.login {
+            .box-shadow(@circle-login-shadow);
+            background:@circle-login-background;
+            color:@circle-login-typo;
+        }
+    }
+}
+
+login {
+    display: block;
+    background-color: black;
+    &.openBanner{
+        -moz-transition-duration: 0.3s;
+        -webkit-transition-duration: 0.3s;
+        -o-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+        -moz-transition-timing-function: ease-in;
+        -webkit-transition-timing-function: ease-in;
+        -o-transition-timing-function: ease-in;
+        transition-timing-function: ease-in;
+        max-height: 1000px;
+        overflow: hidden;
+    }
+    &.closeBanner{
+        overflow: hidden;
+        max-height: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+        -moz-transition-duration: 0.3s;
+        -webkit-transition-duration: 0.3s;
+        -o-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+        -moz-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+        -webkit-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+        -o-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+        transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+    }
+    form{
+        padding-bottom: 19px;
+        position: relative;
+        margin: 15px 0;
+        padding: 39px 19px 14px;
+        background-color: black;
+        border: 1px solid black;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+        color: @circle-logout-background;
+    }
+    .user-account-creation{
+        padding: 39px 14px;
+        color: @circle-logout-background;
+        h2{
+            color: white;
+        }
+    }
+    .help-block{
+        font-size: 12px;
+        color: white;
+    }
+}
+
+post-content{
+    h1{
+        text-transform: uppercase;
+    }
+    h2{
+        font-size: 20px;
+    }
+    h3{
+        margin: 15px 0;
+    }
+    div{
+        padding: 5px 0;
+    }
+    p{
+        padding: 0;
+        margin: 0;
+    }
+}
+
+editable-img{
+    display: block;
+    margin: 25px 0;
+    .img-thumbnail{
+        width: 100%;
+        height: 300px;
+    }
+    nav{
+        position: relative;
+        padding: 10px 10px 0 10px;
+        background-color: #2b2b2b;
+    }
+    button.validate{
+        position: absolute;
+        top: 10px;
+        right: 90px;
+    }
+    button.cancel{
+        position: absolute;
+        top: 10px;
+        right: 20px;
+    }
+}
+
+editable-img img{
+    width: 100%;
+}
+
+img-editor{
+    canvas.thumbnail{
+        display: block;
+        margin-bottom: 0;
+    }
+    ul{
+        list-style: none;
+        padding: 10px;
+        margin: 0;
+        background-color: #2b2b2b;
+    }
+    li{
+        display: inline-block;
+    }
+    li:last-child slider{
+        margin: 0 0 0 20px;
+    }
+    span{
+        color: white;
+    }
+    .form-inline{
+        padding-top: 10px;
+        div{
+            width: 100%;
+            .titre{
+                width: 30%;
+                height: 30px; 
+            }
+            .description{
+                width: 69%;
+                height: 30px; 
+            }
+        }
+    }
+}
+
+slider{
+    display: inline-block;
+    margin: 0 20px;
+    .slider{
+        width: 120px;
+        height: 10px;
+        background-color: black;
+        position: relative;
+    }
+    .holder{
+        width: 10px;
+        height: 10px;
+        background-color: #999;
+        position: absolute;
+        left: 110px;
+        top: 0;
+        cursor: pointer;
+    }
+}
+
+user-info, user-list, articles-by-category{
+    display: block;
+    clear: both;
+    padding: 20px 0;
+    ul{
+        list-style: none;
+        padding: 10px;
+        li{
+            padding: 20px;
+            .clearfix();
+            h4{
+                display: inline-block;
+                cursor: pointer;
+                text-transform: uppercase;
+            }
+            span{
+                display: block;
+            }
+            span.category{
+                display: inline-block;
+            }
+            div{
+                padding: 5px 0;
+            }
+            p{
+                i{
+                    display: inline-block;
+                }
+                span{
+                    display: inline-block;
+                }
+            }
+            select.category{
+                display: inline-block;
+                width: 20%;
+            }
+            input[type=text]{
+                display: inline-block;
+                width: 30%;
+                padding: 0;
+            }
+            button{
+                span{
+                    display: inline-block;
+                    margin-left: 10px;
+                }
+            }
+            &.bg-warning{
+                background-color: #e4e4e4;
+            }
+        }
+    }
+}
+
+article-list .editedArticle{
+    select.category{
+        display: inline-block;
+        width: 20%;
+    }
+    input[type=text]{
+        display: inline-block;
+        width: 30%;
+        padding: 0;
+    }
+    button{
+        span{
+            display: inline-block;
+            margin-left: 10px;
+        }
+    }
+    &.bg-warning{
+        background-color: #e4e4e4;
+    }
+}
+
+category-list{
+    display: block;
+    ul{
+        padding: 0 0 5px 2px;
+        li{
+            display: inline-block;
+            margin-right: 10px;
+            padding: 5px 0;
+        }
+    }
+    input[type=text]{
+        display: inline-block;
+        width: 30%;
+        padding: 0;
+    }
+}
+
+user-info{
+    form{
+        .clearfix();
+        .form-group{
+            padding-bottom: 35px;
+        }
+    }
+}
+
+articles-by-category ul li{
+    .article-shadow();
+    margin-bottom: 20px;
+    h3{
+        padding: 10px 0;
+    }
+    span{
+        display: inline;
+    }
+}
+article-list section, article-list .editedArticle, category-list, user-info, user-list{
+    margin:20px 0;
+    padding: 10px 20px;
+    -moz-box-shadow: 1px 1px 5px 0px #9b9b9b;
+    -webkit-box-shadow: 1px 1px 5px 0px #9b9b9b;
+    -o-box-shadow: 1px 1px 5px 0px #9b9b9b;
+    box-shadow: 1px 1px 5px 0px #9b9b9b;
+    filter:progid:DXImageTransform.Microsoft.Shadow(color=#9b9b9b, Direction=134, Strength=5);
+    h3{
+        padding: 10px 0;
+    }
+}
+
+html-control-bar{
+    display: none;
+    background-color: #2b2b2b;
+    padding: 10px;
+    margin: 10px 0;
+    ul{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        li{
+            display: inline-block;
+            margin: 0;
+            padding: 0;
+            
+            input{
+                font-size: 11px;
+            }
+        }
+    }
+    .hide{
+        display: none;
+    }
+    .show{
+        display: block;
+    }
+}
+
+article-list, category-list, user-info, user-list{
+    background-color: white;
+}
+
+popup{
+    display: block;
+}
+
+new-article{
+    .btns{
+        margin-bottom: 20px;
+    }
+}
+
+@media (min-width:300px) and (max-width:500px) {
+    new-article, article{
+        .filter select, .filter input[type=text], .radio label{
+            display: block;
+            width: 100%;
+        }
+        .filter input[type=text]{
+            margin-top: 5px;
+        }
+        .radio-inline+.radio-inline{
+            margin-left: 0;
+        }
+    }
+    article-list, article-list .editedArticle, user-list{
+        .btns button, select.category{
+            width: 100%;
+            margin-top: 5px;
+        }
+        input[type=text]{
+            width: 80%;
+        }
+        button{
+            display: block;
+            margin: 10px auto;
+            width: 100%;
+        }
+    }
+    div[ui-view]{
+        padding: 0;
+    }
+    editable-img {
+        button{
+            display: block;
+            margin: 10px auto;
+            width: 100%;
+        }
+        button.validate, button.cancel{
+            position: relative;
+            top: 0;
+            right: 0
+        }
+        input[type=text].titre, input[type=text].description{
+            display: block;
+            width: 100%;
+            margin-top: 10px;
+        }
+    }
+}

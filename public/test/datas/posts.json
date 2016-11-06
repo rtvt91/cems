@@ -1,0 +1,177 @@
+{
+    "getPosts": {
+        "data": [
+            {
+                "_id": "5819c3dba600b91fa46596a1",
+                "date": "2016-11-02T10:45:47.102Z",
+                "userId": {
+                    "_id": "5819c3dba600b91fa465969d",
+                    "email": "admin@admin.com",
+                    "firstname": "John",
+                    "lastname": "Doe",
+                    "role": "ADMIN",
+                    "active": true
+                },
+                "categoryId": {
+                    "_id": "5819c3dba600b91fa465969f",
+                    "name": "cat1",
+                    "active": true
+                },
+                "url": "my-first-article",
+                "title": "my first article",
+                "active": true,
+                "h1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "h2": "Ut vehicula risus a sem vestibulum semper.  In commodo ex auctor neque euismod, non fringilla sapien fringilla.",
+                "conflict": false
+            },
+            {
+                "_id": "5819c3dba600b91fa46596a2",
+                "date": "2016-11-02T10:45:47.102Z",
+                "userId": {
+                    "_id": "5819c3dba600b91fa465969d",
+                    "email": "admin@admin.com",
+                    "firstname": "John",
+                    "lastname": "Doe",
+                    "role": "ADMIN",
+                    "active": true
+                },
+                "categoryId": {
+                    "_id": "5819c3dba600b91fa46596a0",
+                    "name": "cat2",
+                    "active": true
+                },
+                "url": "my-second-article",
+                "title": "my second article",
+                "active": true,
+                "h1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "h2": "Ut vehicula risus a sem vestibulum semper.  In commodo ex auctor neque euismod, non fringilla sapien fringilla.",
+                "conflict": false
+            }
+        ],
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU4MTljM2RiYTYwMGI5MWZhNDY1OTY5ZCIsImlhdCI6MTQ3ODA4NDA5MSwiZXhwIjoxNDc4MDk4NDkxfQ.ABuzaZpM6_J_JlyP7K2fbGSE_Ni4eTJrnA3lAAuYEMI"
+    },
+    "getPostById": {
+        "data": [
+            {
+                "_id": "581715aea67e7712543da9db",
+                "date": "2016-10-31T09:58:06.508Z",
+                "userId": {
+                    "_id": "581715aea67e7712543da9d7",
+                    "email": "admin@admin.com",
+                    "firstname": "Romain",
+                    "lastname": "Tran",
+                    "role": "ADMIN",
+                    "active": true
+                },
+                "categoryId": {
+                    "_id": "581715aea67e7712543da9d9",
+                    "name": "cat1",
+                    "active": true
+                },
+                "url": "my-first-article",
+                "title": "my first article",
+                "active": true,
+                "h1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "h2": "Ut vehicula risus a sem vestibulum semper.  In commodo ex auctor neque euismod, non fringilla sapien fringilla.",
+                "conflict": false
+            }
+        ],
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU4MTcxNWFlYTY3ZTc3MTI1NDNkYTlkNyIsImlhdCI6MTQ3ODA3MTc0NSwiZXhwIjoxNDc4MDg2MTQ1fQ.--zMN-zny0wW6JJjTuc2ir-y_1z42UPgUFqa_H2ZC9Y"
+    },
+    "getPostByUrl": {
+        "data": {
+            "_id": "5819c3dba600b91fa46596a1",
+            "creator": {
+                "_id": "5819c3dba600b91fa465969d",
+                "firstname": "John",
+                "lastname": "Doe",
+                "active": true,
+                "role": "ADMIN"
+            },
+            "title": "my first article",
+            "url": "my-first-article",
+            "content": "\r\n<section>\r\n    <header>\r\n        <h1 editable-content>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>\r\n        <h2 editable-content>Ut vehicula risus a sem vestibulum semper.  In commodo ex auctor neque euismod, non fringilla sapien fringilla.</h2>\r\n    </header>\r\n    <article-info></article-info>\r\n    <editable-img>\r\n        <img title='default' alt='default' src='img/post/default/default.jpg'>\r\n    </editable-img>\r\n    <article>\r\n        <h3 editable-content>Nulla ut mi congue, tincidunt eros sit amet</h3>\r\n        <div editable-content>\r\n            Nulla ut mi congue, tincidunt eros sit amet, finibus lacus. Maecenas sagittis, lectus nec lobortis consectetur, velit orci pharetra orci, nec consequat ipsum augue euismod nunc. Vestibulum vel orci ultricies, tincidunt dui nec, accumsan metus. Donec pretium, lacus et finibus venenatis, augue velit pretium erat, lacinia volutpat magna risus eu enim. Etiam lobortis blandit turpis in faucibus.\r\n        </div>\r\n        <div editable-content>\r\n            Nulla ut mi congue, tincidunt eros sit amet, finibus lacus. Maecenas sagittis, lectus nec lobortis consectetur, velit orci pharetra orci, nec consequat ipsum augue euismod nunc. Vestibulum vel orci ultricies, tincidunt dui nec, accumsan metus. Donec pretium, lacus et finibus venenatis, augue velit pretium erat, lacinia volutpat magna risus eu enim. Etiam lobortis blandit turpis in faucibus.\r\n        </div>\r\n    </article>\r\n    <article>\r\n        <h3 editable-content>Nulla ut mi congue, tincidunt eros sit amet</h3>\r\n        <div editable-content>\r\n            Nulla ut mi congue, tincidunt eros sit amet, finibus lacus. Maecenas sagittis, lectus nec lobortis consectetur, velit orci pharetra orci, nec consequat ipsum augue euismod nunc. Vestibulum vel orci ultricies, tincidunt dui nec, accumsan metus. Donec pretium, lacus et finibus venenatis, augue velit pretium erat, lacinia volutpat magna risus eu enim. Etiam lobortis blandit turpis in faucibus.\r\n        </div>\r\n        <div editable-content>\r\n            Nulla ut mi congue, tincidunt eros sit amet, finibus lacus. Maecenas sagittis, lectus nec lobortis consectetur, velit orci pharetra orci, nec consequat ipsum augue euismod nunc. Vestibulum vel orci ultricies, tincidunt dui nec, accumsan metus. Donec pretium, lacus et finibus venenatis, augue velit pretium erat, lacinia volutpat magna risus eu enim. Etiam lobortis blandit turpis in faucibus.\r\n        </div>\r\n    </article>\r\n</section>",
+            "date": "2016-11-02T10:45:47.102Z",
+            "active": true
+        },
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU4MTljM2RiYTYwMGI5MWZhNDY1OTY5ZCIsImlhdCI6MTQ3ODA4NDA5MSwiZXhwIjoxNDc4MDk4NDkxfQ.ABuzaZpM6_J_JlyP7K2fbGSE_Ni4eTJrnA3lAAuYEMI"
+    },
+    "getPostByCategory": {
+        "data": [
+            {
+                "_id": "5819c3dba600b91fa46596a1",
+                "date": "2016-11-02T10:45:47.102Z",
+                "userId": {
+                    "_id": "5819c3dba600b91fa465969d",
+                    "email": "admin@admin.com",
+                    "firstname": "John",
+                    "lastname": "Doe",
+                    "role": "ADMIN",
+                    "active": true
+                },
+                "categoryId": {
+                    "_id": "5819c3dba600b91fa465969f",
+                    "name": "cat1",
+                    "active": true
+                },
+                "url": "my-first-article",
+                "title": "my first article",
+                "active": true,
+                "h1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "h2": "Ut vehicula risus a sem vestibulum semper.  In commodo ex auctor neque euismod, non fringilla sapien fringilla.",
+                "div": "\r\n            Nulla ut mi congue, tincidunt eros sit amet, finibus lacus. Maecenas sagittis, lectus nec lobortis consectetur, velit orci pharetra orci, nec consequat ipsum augue euismod nunc. Vestibulum vel orci ultricies, tincidunt dui nec, accumsan metus. Donec pretium, lacus et finibus venenatis, augue velit pretium erat, lacinia volutpat magna risus eu enim. Etiam lobortis blandit turpis in faucibus.\r\n        "
+            }
+        ],
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU4MTljM2RiYTYwMGI5MWZhNDY1OTY5ZCIsImlhdCI6MTQ3ODA4NDA5MSwiZXhwIjoxNDc4MDk4NDkxfQ.ABuzaZpM6_J_JlyP7K2fbGSE_Ni4eTJrnA3lAAuYEMI"
+    },
+    "getPostByUser": {
+        "data": [
+            {
+                "_id": "581715aea67e7712543da9db",
+                "date": "2016-10-31T09:58:06.508Z",
+                "userId": {
+                    "_id": "581715aea67e7712543da9d7",
+                    "email": "admin@admin.com",
+                    "firstname": "John",
+                    "lastname": "Doe",
+                    "role": "ADMIN",
+                    "active": true
+                },
+                "categoryId": {
+                    "_id": "581715aea67e7712543da9d9",
+                    "name": "cat1",
+                    "active": true
+                },
+                "url": "my-first-article",
+                "title": "my first article",
+                "active": true,
+                "h1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "h2": "Ut vehicula risus a sem vestibulum semper.  In commodo ex auctor neque euismod, non fringilla sapien fringilla.",
+                "conflict": false
+            }
+        ],
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU4MTcxNWFlYTY3ZTc3MTI1NDNkYTlkNyIsImlhdCI6MTQ3ODA3MTc0NSwiZXhwIjoxNDc4MDg2MTQ1fQ.--zMN-zny0wW6JJjTuc2ir-y_1z42UPgUFqa_H2ZC9Y"
+    },
+    "postPost": {
+        "msgType": "post-post",
+        "msg": "Your post has been successfully recorded",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU4MTljM2RiYTYwMGI5MWZhNDY1OTY5ZCIsImlhdCI6MTQ3ODA4MzU0NywiZXhwIjoxNDc4MDk3OTQ3fQ.CtJJ9jujF3YMTeDKWsocjxrNIEJga4mzF3vKD8VZM9U"
+    },
+    "putPost": {
+        "msgType": "put-post",
+        "msg": "The article has been successfully updated.",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU4MTljM2RiYTYwMGI5MWZhNDY1OTY5ZCIsImlhdCI6MTQ3ODA4MzU0NywiZXhwIjoxNDc4MDk3OTQ3fQ.CtJJ9jujF3YMTeDKWsocjxrNIEJga4mzF3vKD8VZM9U"
+    },
+    "deletePost": {
+        "msgType": "delete-post",
+        "msg": "The article has been successfully deleted.",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU4MTljM2RiYTYwMGI5MWZhNDY1OTY5ZCIsImlhdCI6MTQ3ODA4NTk5MSwiZXhwIjoxNDc4MTAwMzkxfQ.bNofPlLYoK7riPJyosbwntViV03DP1brJIsNQGI1fmc"
+    },
+    "postImg": {
+        "url": "img/post/temp/5819c3dba600b91fa465969d_my-img.png",
+        "description": "my img",
+        "msgType": "save-img",
+        "msg": "Your image has been successfully uploaded, save this article to keep this modification",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU4MTljM2RiYTYwMGI5MWZhNDY1OTY5ZCIsImlhdCI6MTQ3ODA4NTk5MSwiZXhwIjoxNDc4MTAwMzkxfQ.bNofPlLYoK7riPJyosbwntViV03DP1brJIsNQGI1fmc"
+    }
+}

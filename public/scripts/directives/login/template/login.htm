@@ -1,0 +1,63 @@
+<form name="loginForm" class="form-horizontal" ng-hide="loginCtrl.props.isConnected" novalidate>
+    <div class="form-group">
+        <label for="email" class="col-sm-2 control-label">Email</label>
+        <div class="col-sm-10">
+            <input type="email" class="form-control" id="email" name="email" placeholder="Email" required ng-model="user.email">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="password" class="col-sm-2 control-label">Password</label>
+        <div class="col-sm-10">
+            <input type="password" class="form-control" id="password" name="password" placeholder="Password" required ng-model="user.password">
+        </div>
+    </div>
+    <div class="form-group" ng-show="loginCtrl.props.toggled">
+        <label for="password" class="col-sm-2 control-label">Verify Password</label>
+        <div class="col-sm-10">
+            <input type="password" class="form-control" id="password2" name="password2" placeholder="Password" required ng-model="user.password2">
+            <span class="help-block">
+                <i class="glyphicon glyphicon-exclamation-sign"></i>
+                Password must contain at least : 8 characters, 1 special character, an uppercase letter and a number. (ex: P@ssw0rd)
+            </span>
+        </div>
+    </div>
+    <div class="form-group" ng-show="loginCtrl.props.toggled">
+        <label for="firstname" class="col-sm-2 control-label">Firstname</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="firstname" name="firstname" placeholder="Firstname" required ng-disabled="!loginCtrl.props.toggled" ng-model="user.firstname">
+        </div>
+    </div>
+    <div class="form-group" ng-show="loginCtrl.props.toggled">
+        <label for="lastname" class="col-sm-2 control-label">Lastname</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Lastname" required ng-disabled="!loginCtrl.props.toggled" ng-model="user.lastname">
+        </div>
+    </div>
+    <div class="form-group" ng-hide="loginCtrl.props.toggled">
+        <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-primary" ng-disabled="loginCtrl.enableSignIn(loginForm)" ng-click="loginCtrl.signIn(user)">Sign in</button>
+            <button type="button" class="btn btn-link" ng-click="loginCtrl.toggleForm()">Create an account ?</button>
+        </div>
+    </div>
+    <div class="form-group" ng-show="loginCtrl.props.toggled">
+        <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-primary" ng-disabled="loginCtrl.enableCreateAccount(loginForm)" ng-click="loginCtrl.createAccount(user)">Create account</button>
+            <button type="button" class="btn btn-link" ng-click="loginCtrl.toggleForm()">Already have an account ?</button>
+        </div>
+    </div>
+</form>
+
+<div class="user-account-creation" ng-show="loginCtrl.props.isConnected && loginCtrl.props.isConnected.active">
+    <h2>Welcome {{loginCtrl.props.user.firstname}} {{loginCtrl.props.user.lastname}}</h2>
+    <button class="btn btn-primary" ng-click="loginCtrl.gotoDashboard()">Dashboard</button>
+    <button class="btn btn-danger" ng-click="loginCtrl.logout()">Disconnect</button>
+</div>
+
+<div class="user-account-creation" ng-show="loginCtrl.props.isConnected && !loginCtrl.props.isConnected.active">
+    <h2>Welcome {{loginCtrl.props.user.firstname}} {{loginCtrl.props.user.lastname}}</h2>
+    <div class="help-block" role="alert">
+        <span class="glyphicon glyphicon-exclamation-sign"></span>
+        Your account has been successfully created. You must now wait until administrator validation to access your dashboard and create new posts.
+    </div>
+    <button class="btn btn-danger" ng-click="loginCtrl.logout()">Disconnect</button>
+</div>

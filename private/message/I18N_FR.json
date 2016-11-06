@@ -1,0 +1,59 @@
+
+{
+	"USER":{
+		"ERROR":{
+			"INVALID_EMAIL":"Vous devez rentrer un email valide.",
+			"INVALID_PASSWORD":"Vous devez rentrer un mot de passe valide.",
+			"INVALID_FIRSTNAME":"Vous devez rentrer un prénom valide.",
+			"INVALID_LASTNAME":"Vous devez rentrer un nom de famille valide.",
+			"WRONG_EMAIL":"Cet email n'existe pas, veuillez modifier votre saisie.",
+			"WRONG_EMAIL_AND_PASSWORD":"Vous devez rentrer un email et un mot de passe valide.",
+			"EXPIRED_JWT":"Vous devez vous reconnecter."
+		},
+		"SUCCESS":{
+			"AUTHENTICATION_GRANTED":"Authentification réussie.",
+			"DISCONNECTION":"Déconnection effective"
+		}
+	},
+	"POST":{
+		"ERROR":{
+			"INVALID_USER_ID":"L'utilisateur n'est pas reconnu",
+			"INVALID_CATEGORY_ID":"La catégorie n'est pas reconnue",
+			"INVALID_URL":"Vous devez spécifier une url pour ce post",
+			"INVALID_TITLE":"Vous devez spécifier un titre valide",
+			"INVALID_CONTENT":"Vous devez spécifier un contenu valide",
+			"IMG_CREATION_ERROR":"L'image n'a pu être sauvegardée"
+		},
+		"SUCCESS":{
+			"POST_RECORDED": "Votre post a bien été enregistré",
+			"IMG_RECORDED":"Votre image a bien été uploadée, sauvegarder votre article pour conserver ce changement"
+		}
+	},
+	"CATEGORY":{
+		"ERROR":{
+			"INVALID_CATEGORY_NAME": "Vous devez spécifier le nom de la catégorie"
+		},
+		"SUCCESS":{
+			"CATEGORY_RECORDED": "La catégorie a bien été enregistrée"
+		}
+	},
+	"MONGO":{
+		"EMPTY_SELECTION":"La sélection demandée est vide.",
+		"TECHNICAL_ERROR":"Une erreur technique au niveau de mongodb est survenue. Merci de réessayer ultérieurement.",
+		"EMAIL_ALREADY_EXIST":"L'email saisie existe déjà en base.",
+		"URL_ALREADY_EXIST":"L'url saisie existe déjà en base.",
+		"USER_REGISTERED":"L'utilisateur a été enregistré avec succès.",
+		"USER_UPDATED":"La modification a bien été prise en compte",
+		"USER_DELETED":"L'utilisateur a été correctement supprimé.",
+		"POST_REGISTERED":"Le nouvel article a bien été enregistré",
+		"POST_UPDATED":"L'article a bien été mis à jour",
+		"POST_DELETED":"L'article a correctement été supprimé",
+		"CATEGORY_ALREADY_EXIST":"La catégorie existe déjà en base",
+		"CATEGORY_UPDATED":"La catégorie a correctement été mise à jour",
+		"CATEGORY_DELETED":"La catégorie a correctement été supprimée"
+	},
+	"COMMON":{
+		"TECHNICAL_ERROR":"Une erreur technique est survenue. Merci de réessayer ultérieurement.",
+		"SESSION_EXPIRED":"Veuillez vous réauthentifier."
+	}
+}

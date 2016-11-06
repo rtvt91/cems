@@ -1,0 +1,35 @@
+<section>
+    <article>
+        <div>
+            <ul>
+                <li ng-repeat="article in articlesByCategoryCtrl.articles">
+                    <div>
+                        <div class="alert alert-danger" role="alert" ng-show="article.conflict">
+                            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                            <span class="sr-only">Error:</span>There's one or more post which point to the same url, this will cause a probleme for displaying it correctly. <br/>Please change the post's category or url.
+                        </div>
+                        <h4 ng-click="articlesByCategoryCtrl.gotoArticle(article.categoryId.name, article.url)" ng-bind-html="article.compute.h1"></h4>
+                        <h5 ng-bind-html="article.compute.h2"></h5>
+                        <div ng-bind-html="article.compute.div"></div>
+                        <div>
+                            <i class="glyphicon glyphicon-calendar"></i>{{article.compute.date | date:'MM/dd/yyyy'}}
+                            <span ng-class="{'text-primary':articlesByCategoryCtrl.isConnectedUser(article.userId._id)}">
+                                <i class="glyphicon glyphicon-user"></i>
+                                <strong ng-class="{'text-primary':articlesByCategoryCtrl.isActive}">{{article.compute.username}}</strong>
+                            </span>
+                            <button class="btn btn-link" ng-click="articlesByCategoryCtrl.gotoArticle(article.categoryId.name, article.url)">
+                            <span>Read more</span>
+                        </button>
+                        </div>
+                    </div>
+                    <div class="btns">
+                        
+                    </div>
+                </li>
+            </ul>
+            <div ng-show="articlesByCategoryCtrl.articles.length === 0">
+                <span>There's currently no article</span>
+            </div>
+        </div>
+    </article>
+</section>

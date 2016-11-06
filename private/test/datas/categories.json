@@ -1,0 +1,25 @@
+{
+  "data": [
+    {
+      "_id": "580fb9266a14531fec19dd3f",
+      "date": "Tue Oct 25 2016 21:57:04 GMT+0200 (Paris, Madrid (heure d’été))",
+      "name": "default",
+      "defaultCat": true,
+      "active": true
+    },
+    {
+      "_id": "58130daa0ba9a413547cce8b",
+      "date": "Tue Oct 25 2016 21:57:04 GMT+0200 (Paris, Madrid (heure d’été))",
+      "name": "cat1",
+      "defaultCat": false,
+      "active": true
+    },
+    {
+      "_id": "5810e1c1d5f377335083d7e4",
+      "date": "Wed Oct 26 2016 19:02:57 GMT+0200 (Paris, Madrid (heure d’été))",
+      "name": "cat2",
+      "defaultCat": false,
+      "active": true
+    }
+  ]
+}

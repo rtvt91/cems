@@ -1,0 +1,72 @@
+<h1>HOME</h1>
+<section id="home">
+    <article>
+        <header>
+            <h2>Welcome To C[E]MS</h2>
+        </header>
+        <div class="alert alert-danger" role="alert">REMEMBER TO NOT USE IT IN PRODUCTION MODE. This is only for test purpose !</div>
+    </article>
+    <article>
+        <h3>A few tips</h3>
+        <h4>#Create a new Article</h4>
+        <div>
+            <p>
+                First of all, you must be connected to create a new article then you can either go to <strong>dashboard/article-list</strong> page or <strong>type directly into the url bar</strong> to create one.<br/>
+                A new article must belong to a category and have a proper url (Url must contains only letter, number, dash).
+                If you choose to create a new article <strong> typing directly from the url bar</strong>, make sure the caregory name exists and the url isn't already use (ex: default/my-new-test-article).
+                If an article already exists in the choosen category, C[E]MS will display it.
+            </p>
+            <p class="text-danger">
+                You cannot update an article if it does not belong to your account. Even <strong>Admin user</strong> cannot modify an article that he/she didn't create.
+            </p>
+            <p>The article owner name will be highlighted in blue and a save button will appear at the end of it if the article belongs to your account</p>
+            <p><strong>C[E]MS use content-editable attribute</strong>. A new article will by default be filled with lorem ipsum text. you just have select it and modify it.</p>
+            <p>You can add/remove content by double-clicking an editable text. A panel will be displayed. You can add a new div or h3, or delete the current selected node</p>
+            <p>You can save the modification on an article by clicking the save button at the end of it or use the <strong>[alt-s] shortcut</strong></p> 
+            <p><strong>C[E]MS use canvas for image modification</strong>. A new article will by default contains a black image that you can modify. Just drag and drop a new image on it to open a bitmap editor</p>
+            <p class="text-primary">Remember: saving a new image from the editor will only update it. To link it to the current article, you have to save the article by clicking the save button or using the [alt-s] shortcut</p>
+        </div>
+        <h4>#Validate a new Article</h4>
+        <div>
+            <p>Once a new article has been created, only <strong>Admin user can activate it</strong></p>
+            <p>This can be achieved by accessing dashboard/article-list as Admin</p>
+            <p>It won't be displayed for anyone other than Admin and article owner until it is activated</p>
+        </div>
+        <h4>#Create a new User</h4>
+        <div>
+            <p>When launching the application for the first time, the account created will automatically be Admin. This is the only Admin account possible</p>
+            <p>When you create another account via the application banner, this account will not be active until Admin validate it</p>
+            <p>You can achieve it by going to the dashboard/user-list and activate the desired account</p>
+            <p>A deactivated account can't create new content or access its dashboard.</p>
+        </div>
+        <h4>#Create/delete a Category</h4>
+        <div>
+            <p>When launching the application for the first time, 3 categories will be automatically created (default, cat1 and cat2)</p>
+            <p>You can add/delete a category except the default one. Articles that belong to a recently deleted category will be automatically assigned to the default one</p>
+            <p>Only Admin can create new category</p>
+        </div>
+        <h4>#Shortcut list</h4>
+        <div>
+            <ul>
+                <li>[alt-l] : display/hide the login module</li>
+                <li>[alt-h] : go to homepage</li>
+                <li>[alt-p] : go to dashboard/user-info (connected only, 401 otherwise)</li>
+                <li>[alt-q] : disconnect</li>
+                <li>[alt-s] : saving the article modification</li>
+            </ul>
+        </div>
+        <h4>#401</h4>
+        <div>
+            If you hit a 401 page you will be automatically logged out. But this will happen if you try something not allowed...
+        </div>
+        <h4>#Email</h4>
+        <div>
+            C[E]MS does't provide a smtp server but bcrypt the passwords before saving them. So there's no way for us to give you the possibility to access your dashboard if you forget tour password.<br/>
+            C[E]MS will soon put a nodemailer service to correct this problem.
+        </div>
+        <h4>#Reset</h4>
+        <div>
+            You can reset the application by typing in command line gulp-reset. This will drop the database and destroy all uploaded images. Mongod must be running to reset the application.
+        </div>
+    </article>
+</section>

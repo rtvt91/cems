@@ -1,0 +1,18 @@
+{
+    "CEMS":{
+        "postInput": {},
+        "categoryInput": {},
+        "articleInput": {},
+        "imageInput": {},
+        "jwt":{
+            "validateToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU4MGZiOTI2NmExNDUzMWZlYzE5ZGQzZSIsImlhdCI6MTQ3NzY0ODE0NywiZXhwIjoxNDc3NjYyNTQ3fQ.70mO2DvKm0wvi-GkTrSf7ssuQg0sTJ-VOdK3tjsiTvY",
+            "validateDecodedToken":{
+                "id": "580fb9266a14531fec19dd3e"
+            },
+            "role": "ADMIN"
+        },
+        "server":{
+            "lang": "en"
+        }
+    }
+}

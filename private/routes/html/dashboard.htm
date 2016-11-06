@@ -1,0 +1,13 @@
+<h1>DASHBOARD</h1>
+
+<div ng-controller="DashboardController as dashboardCtrl">
+    <ul class="nav nav-tabs" role="tablist">
+        <li role="dashboard" ng-class="{active:dashboardCtrl.currentSelection === 'user-info'}" ng-click="dashboardCtrl.toggleNav('user-info')"><a ng-click="dashboardCtrl.gotoState('user-info')" aria-controls="user-info" role="tab" data-toggle="tab">User Infos</a></li>
+        <li role="dashboard" ng-class="{active:dashboardCtrl.currentSelection === 'article-list'}" ng-click="dashboardCtrl.toggleNav('article-list')"><a ng-click="dashboardCtrl.gotoState('article-list')" aria-controls="article-list" role="tab" data-toggle="tab">Article list</a></li>
+    </ul>
+    
+    <div class="tab-content">
+        <div ui-view></div>
+    </div>
+
+</div>

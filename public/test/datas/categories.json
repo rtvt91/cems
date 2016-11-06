@@ -1,0 +1,57 @@
+{
+    "getCategories": {
+        "data": [
+            {
+                "_id": "5819c3dba600b91fa465969e",
+                "date": "2016-11-02T10:45:31.620Z",
+                "name": "default",
+                "defaultCat": true,
+                "active": true
+            },
+            {
+                "_id": "5819c3dba600b91fa465969f",
+                "date": "2016-11-02T10:45:31.620Z",
+                "name": "cat1",
+                "defaultCat": false,
+                "active": true
+            },
+            {
+                "_id": "5819c3dba600b91fa46596a0",
+                "date": "2016-11-02T10:45:31.620Z",
+                "name": "cat2",
+                "defaultCat": false,
+                "active": true
+            }
+        ],
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU4MTljM2RiYTYwMGI5MWZhNDY1OTY5ZCIsImlhdCI6MTQ3ODA4NTk5MSwiZXhwIjoxNDc4MTAwMzkxfQ.bNofPlLYoK7riPJyosbwntViV03DP1brJIsNQGI1fmc"
+    },
+    "postCategory": {
+        "data": {
+            "date": "2016-11-02T12:05:04.130Z",
+            "name": "cat3",
+            "defaultCat": false,
+            "_id": "5819d67047a9181a08285190",
+            "active": true
+        },
+        "msgType": "post-category",
+        "msg": "Category has been successfully recorded",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU4MTljM2RiYTYwMGI5MWZhNDY1OTY5ZCIsImlhdCI6MTQ3ODA4NTk5MSwiZXhwIjoxNDc4MTAwMzkxfQ.bNofPlLYoK7riPJyosbwntViV03DP1brJIsNQGI1fmc"
+    },
+    "putCategory": {
+        "data": {
+            "_id": "5819d67047a9181a08285190",
+            "date": "2016-11-02T12:05:04.130Z",
+            "name": "my-new-cat",
+            "defaultCat": false,
+            "active": true
+        },
+        "msgType": "put-category",
+        "msg": "The category has been successfully updated.",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU4MTljM2RiYTYwMGI5MWZhNDY1OTY5ZCIsImlhdCI6MTQ3ODA4ODgxMSwiZXhwIjoxNDc4MTAzMjExfQ.McehhhoTAQVqV2re03wUJJ9zkquNLn1WNkBLhrxMdCs"
+    },
+    "deleteCategory": {
+        "msgType": "delete-category",
+        "msg": "The category has been successfully deleted.",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU4MTljM2RiYTYwMGI5MWZhNDY1OTY5ZCIsImlhdCI6MTQ3ODA4NTk5MSwiZXhwIjoxNDc4MTAwMzkxfQ.bNofPlLYoK7riPJyosbwntViV03DP1brJIsNQGI1fmc"
+    }
+}

@@ -1,0 +1,88 @@
+{
+  "getUsers": {
+    "data": [
+      {
+        "_id": "581715aea67e7712543da9d7",
+        "email": "admin@admin.com",
+        "firstname": "John",
+        "lastname": "Doe",
+        "date": "2016-10-31T09:58:06.465Z",
+        "role": "ADMIN",
+        "active": true
+      },
+      {
+        "_id": "5819965296eee52a5831b01b",
+        "email": "hello@world.com",
+        "firstname": "Hello",
+        "lastname": "World",
+        "date": "2016-11-02T07:31:30.125Z",
+        "role": "WRITER",
+        "active": true
+      }
+    ],
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU4MTcxNWFlYTY3ZTc3MTI1NDNkYTlkNyIsImlhdCI6MTQ3ODA3MTc0NSwiZXhwIjoxNDc4MDg2MTQ1fQ.--zMN-zny0wW6JJjTuc2ir-y_1z42UPgUFqa_H2ZC9Y"
+  },
+  "getUser": {
+    "data": {
+      "_id": "581715aea67e7712543da9d7",
+      "email": "admin@admin.com",
+      "firstname": "John",
+      "lastname": "Doe",
+      "date": "2016-10-31T09:58:06.465Z",
+      "role": "ADMIN",
+      "active": true
+    },
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU4MTcxNWFlYTY3ZTc3MTI1NDNkYTlkNyIsImlhdCI6MTQ3ODA3MTc0NSwiZXhwIjoxNDc4MDg2MTQ1fQ.--zMN-zny0wW6JJjTuc2ir-y_1z42UPgUFqa_H2ZC9Y"
+  },
+  "postUser": {
+    "data": {
+      "email": "user@user.com",
+      "firstname": "firstname",
+      "lastname": "lastname",
+      "role": "WRITER",
+      "active": false,
+      "date": "2016-11-02T08:15:14.568Z"
+    },
+    "msgType": "post-user",
+    "msg": "Authentication granted.",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU4MTlhMDkyOGUzYzEzMzNlNGI1MTRmZCIsImlhdCI6MTQ3ODA3NDUxNCwiZXhwIjoxNDc4MDg4OTE0fQ.LDUnmVpFsFFdUIWP4abp8NgZ82arr-NXpAhWL-r61r0"
+  },
+  "putUser": {
+    "data": [
+      {
+        "email": "hello@world.com",
+        "firstname": "Jane",
+        "lastname": "Joe",
+        "role": "WRITER",
+        "active": false,
+        "date": "2016-11-02T07:31:30.125Z"
+      }
+    ],
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU4MTcxNWFlYTY3ZTc3MTI1NDNkYTlkNyIsImlhdCI6MTQ3ODA3MTc0NSwiZXhwIjoxNDc4MDg2MTQ1fQ.--zMN-zny0wW6JJjTuc2ir-y_1z42UPgUFqa_H2ZC9Y",
+    "msgType": "put-user",
+    "msg": "The modification has been successfully done"
+  },
+  "deleteUser": {
+    "msgType": "delete-user",
+    "msg": "The user is successfully deleted.",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU4MTcxNWFlYTY3ZTc3MTI1NDNkYTlkNyIsImlhdCI6MTQ3ODA3MTc0NSwiZXhwIjoxNDc4MDg2MTQ1fQ.--zMN-zny0wW6JJjTuc2ir-y_1z42UPgUFqa_H2ZC9Y"
+  },
+  "login": {
+    "data": {
+      "_id": "581715aea67e7712543da9d7",
+      "email": "admin@admin.com",
+      "firstname": "John",
+      "lastname": "Doe",
+      "role": "ADMIN",
+      "date": "2016-10-31T09:58:06.465Z",
+      "active": true
+    },
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU4MTcxNWFlYTY3ZTc3MTI1NDNkYTlkNyIsImlhdCI6MTQ3ODA3NjQ3NSwiZXhwIjoxNDc4MDkwODc1fQ.12T90HFC6PLd9Awnt92YxXR-iYkes2sovMQya6efZhw",
+    "msgType": "login",
+    "msg": "Authentication granted."
+  },
+  "logout": {
+    "msgType": "logout",
+    "msg": "Effective disconnection"
+  }
+}

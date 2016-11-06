@@ -1,0 +1,50 @@
+{
+  "data": [
+    {
+      "_id": "580fce78a25f5125f00405e1",
+      "date": "Tue Oct 25 2016 23:28:24 GMT+0200 (Paris, Madrid (heure d’été))",
+      "userId": {
+        "_id": "580fb9266a14531fec19dd3e",
+        "email": "admin@admin.com",
+        "firstname": "John",
+        "lastname": "Doe",
+        "role": "ADMIN",
+        "active": true
+      },
+      "categoryId": {
+        "_id": "58130daa0ba9a413547cce8b",
+        "name": "cat1",
+        "active": true
+      },
+      "url": "my-first-article",
+      "title": "my first article",
+      "active": true,
+      "h1": "My first article",
+      "h2": "My first subtitle",
+      "conflict": false
+    },
+    {
+      "_id": "58132ab93484a721f8d8e67e",
+      "date": "Fri Oct 28 2016 12:38:49 GMT+0200 (Paris, Madrid (heure d’été))",
+      "userId": {
+        "_id": "581073265353950b4c99ec56",
+        "email": "mike@johnson.com",
+        "firstname": "Mike",
+        "lastname": "Johnson",
+        "role": "WRITER",
+        "active": true
+      },
+      "categoryId": {
+        "_id": "5810e1c1d5f377335083d7e4",
+        "name": "cat2",
+        "active": true
+      },
+      "url": "my-first-article",
+      "title": "my first article",
+      "active": false,
+      "h1": "My first article",
+      "h2": "My first subtitle",
+      "conflict": false
+    }
+  ]
+}

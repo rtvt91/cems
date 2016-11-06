@@ -1,0 +1,59 @@
+
+{
+	"USER":{
+		"ERROR":{
+			"INVALID_EMAIL":"You must enter a valid email.",
+			"INVALID_PASSWORD":"You must enter a valid password.",
+			"INVALID_FIRSTNAME":"You must enter a valid firstname.",
+			"INVALID_LASTNAME":"You must enter a valid lastname.",
+			"WRONG_EMAIL":"This email doesn\"t exits, please try again.",
+			"WRONG_EMAIL_AND_PASSWORD":"You must enter a valid email and password.",
+			"EXPIRED_JWT":"You must log again."
+		},
+		"SUCCESS":{
+			"AUTHENTICATION_GRANTED":"Authentication granted.",
+			"DISCONNECTION":"Effective disconnection"
+		}
+	},
+	"POST":{
+		"ERROR":{
+			"INVALID_USER_ID":"User seems not to exist",
+			"INVALID_CATEGORY_ID":"The category seems not to exist",
+			"INVALID_URL":"You must specify an url for this post",
+			"INVALID_TITLE":"You must specify a valid title",
+			"INVALID_CONTENT":"You must specify a valid content",
+			"IMG_CREATION_ERROR":"We cannot save this image"
+		},
+		"SUCCESS":{
+			"POST_RECORDED":"Your post has been successfully recorded",
+			"IMG_RECORDED":"Your image has been successfully uploaded, save this article to keep this modification"
+		}
+	},
+	"CATEGORY":{
+		"ERROR":{
+			"INVALID_CATEGORY_NAME":"You must specify a valid category name"
+		},
+		"SUCCESS":{
+			"CATEGORY_RECORDED":"Category has been successfully recorded"
+		}
+	},
+	"MONGO":{
+		"EMPTY_SELECTION":"The query selection is empty",
+		"TECHNICAL_ERROR":"A mongodb technical error occured. Please try again next time.",
+		"EMAIL_ALREADY_EXIST":"Email already exits in database.",
+		"URL_ALREADY_EXIST":"URL already exits in database.",
+		"USER_REGISTERED":"The user is successfully recorded.",
+		"USER_UPDATED":"The modification has been successfully done",
+		"USER_DELETED":"The user is successfully deleted.",
+		"POST_REGISTERED":"The new article has been successfully recorded",
+		"POST_UPDATED":"The article has been successfully updated.",
+		"POST_DELETED":"The article has been successfully deleted.",
+		"CATEGORY_ALREADY_EXIST":"The category name already exists.",
+		"CATEGORY_UPDATED":"The category has been successfully updated.",
+		"CATEGORY_DELETED":"The category has been successfully deleted."
+	},
+	"COMMON":{
+		"TECHNICAL_ERROR":"Une erreur technique est survenue. Merci de réessayer ultérieurement.",
+		"SESSION_EXPIRED":"Please log in."
+	}
+}

@@ -1,0 +1,304 @@
+{
+  "data": [
+    {
+      "_id": "580fce78a25f5125f00405e1",
+      "date": "Tue Oct 25 2016 23:28:24 GMT+0200 (Paris, Madrid (heure d’été))",
+      "userId": {
+        "_id": "580fb9266a14531fec19dd3e",
+        "email": "admin@admin.com",
+        "firstname": "John",
+        "lastname": "Doe",
+        "role": "ADMIN",
+        "active": true
+      },
+      "categoryId": {
+        "_id": "58130daa0ba9a413547cce8b",
+        "name": "cat1",
+        "active": true
+      },
+      "url": "my-first-article",
+      "title": "my first article",
+      "__v": 0,
+      "content": [
+        {
+          "tagName": "section",
+          "children": [
+            {
+              "content": "\n    ",
+              "type": "Text"
+            },
+            {
+              "tagName": "header",
+              "children": [
+                {
+                  "content": "\n        ",
+                  "type": "Text"
+                },
+                {
+                  "tagName": "h1",
+                  "attributes": {
+                    "editableContent": 0
+                  },
+                  "children": [
+                    {
+                      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                      "type": "Text"
+                    }
+                  ],
+                  "type": "Element"
+                },
+                {
+                  "content": "\n        ",
+                  "type": "Text"
+                },
+                {
+                  "tagName": "h2",
+                  "attributes": {
+                    "editableContent": 0
+                  },
+                  "children": [
+                    {
+                      "content": "Ut vehicula risus a sem vestibulum semper.  In commodo ex auctor neque euismod, non fringilla sapien fringilla.",
+                      "type": "Text"
+                    }
+                  ],
+                  "type": "Element"
+                },
+                {
+                  "content": "\n    ",
+                  "type": "Text"
+                }
+              ],
+              "type": "Element"
+            },
+            {
+              "content": "\n    ",
+              "type": "Text"
+            },
+            {
+              "tagName": "article-info",
+              "children": [
+                {
+                  "tagName": "div",
+                  "children": [
+                    {
+                      "content": "\n    ",
+                      "type": "Text"
+                    },
+                    {
+                      "type": "Text",
+                      "content": ""
+                    },
+                    {
+                      "content": "10&#x2F;14&#x2F;2016\n    ",
+                      "type": "Text"
+                    },
+                    {
+                      "tagName": "span",
+                      "children": [
+                        {
+                          "content": "\n        ",
+                          "type": "Text"
+                        },
+                        {
+                          "type": "Text",
+                          "content": ""
+                        },
+                        {
+                          "content": "\n        ",
+                          "type": "Text"
+                        },
+                        {
+                          "type": "Text",
+                          "content": ""
+                        },
+                        {
+                          "content": "\n    ",
+                          "type": "Text"
+                        }
+                      ],
+                      "type": "Element"
+                    },
+                    {
+                      "content": "\n",
+                      "type": "Text"
+                    }
+                  ],
+                  "type": "Element"
+                }
+              ],
+              "type": "Element"
+            },
+            {
+              "content": "\n    ",
+              "type": "Text"
+            },
+            {
+              "tagName": "editable-img",
+              "children": [
+                {
+                  "content": "\n        ",
+                  "type": "Text"
+                },
+                {
+                  "tagName": "img",
+                  "attributes": {
+                    "title": "my first img",
+                    "alt": "my first img",
+                    "src": "img/post/media/1477650939616_my-first-img.png"
+                  },
+                  "type": "Element"
+                },
+                {
+                  "content": "\n    ",
+                  "type": "Text"
+                }
+              ],
+              "type": "Element"
+            },
+            {
+              "content": "\n    ",
+              "type": "Text"
+            },
+            {
+              "tagName": "article",
+              "children": [
+                {
+                  "content": "\n        ",
+                  "type": "Text"
+                },
+                {
+                  "tagName": "h3",
+                  "attributes": {
+                    "editableContent": 0
+                  },
+                  "children": [
+                    {
+                      "content": "Nulla ut mi congue, tincidunt eros sit amet",
+                      "type": "Text"
+                    }
+                  ],
+                  "type": "Element"
+                },
+                {
+                  "content": "\n        ",
+                  "type": "Text"
+                },
+                {
+                  "tagName": "div",
+                  "attributes": {
+                    "editableContent": 0
+                  },
+                  "children": [
+                    {
+                      "content": "\n            Nulla ut mi congue, tincidunt eros sit amet, finibus lacus. Maecenas sagittis, lectus nec lobortis consectetur, velit orci pharetra orci, nec consequat ipsum augue euismod nunc. Vestibulum vel orci ultricies, tincidunt dui nec, accumsan metus. Donec pretium, lacus et finibus venenatis, augue velit pretium erat, lacinia volutpat magna risus eu enim. Etiam lobortis blandit turpis in faucibus.\n        ",
+                      "type": "Text"
+                    }
+                  ],
+                  "type": "Element"
+                },
+                {
+                  "content": "\n        ",
+                  "type": "Text"
+                },
+                {
+                  "tagName": "div",
+                  "attributes": {
+                    "editableContent": 0
+                  },
+                  "children": [
+                    {
+                      "content": "\n            Nulla ut mi congue, tincidunt eros sit amet, finibus lacus. Maecenas sagittis, lectus nec lobortis consectetur, velit orci pharetra orci, nec consequat ipsum augue euismod nunc. Vestibulum vel orci ultricies, tincidunt dui nec, accumsan metus. Donec pretium, lacus et finibus venenatis, augue velit pretium erat, lacinia volutpat magna risus eu enim. Etiam lobortis blandit turpis in faucibus.\n        ",
+                      "type": "Text"
+                    }
+                  ],
+                  "type": "Element"
+                },
+                {
+                  "content": "\n    ",
+                  "type": "Text"
+                }
+              ],
+              "type": "Element"
+            },
+            {
+              "content": "\n    ",
+              "type": "Text"
+            },
+            {
+              "tagName": "article",
+              "children": [
+                {
+                  "content": "\n        ",
+                  "type": "Text"
+                },
+                {
+                  "tagName": "h3",
+                  "attributes": {
+                    "editableContent": 0
+                  },
+                  "children": [
+                    {
+                      "content": "Nulla ut mi congue, tincidunt eros sit amet",
+                      "type": "Text"
+                    }
+                  ],
+                  "type": "Element"
+                },
+                {
+                  "content": "\n        ",
+                  "type": "Text"
+                },
+                {
+                  "tagName": "div",
+                  "attributes": {
+                    "editableContent": 0
+                  },
+                  "children": [
+                    {
+                      "content": "\n            Nulla ut mi congue, tincidunt eros sit amet, finibus lacus. Maecenas sagittis, lectus nec lobortis consectetur, velit orci pharetra orci, nec consequat ipsum augue euismod nunc. Vestibulum vel orci ultricies, tincidunt dui nec, accumsan metus. Donec pretium, lacus et finibus venenatis, augue velit pretium erat, lacinia volutpat magna risus eu enim. Etiam lobortis blandit turpis in faucibus.\n        ",
+                      "type": "Text"
+                    }
+                  ],
+                  "type": "Element"
+                },
+                {
+                  "content": "\n        ",
+                  "type": "Text"
+                },
+                {
+                  "tagName": "div",
+                  "attributes": {
+                    "editableContent": 0
+                  },
+                  "children": [
+                    {
+                      "content": "\n            Nulla ut mi congue, tincidunt eros sit amet, finibus lacus. Maecenas sagittis, lectus nec lobortis consectetur, velit orci pharetra orci, nec consequat ipsum augue euismod nunc. Vestibulum vel orci ultricies, tincidunt dui nec, accumsan metus. Donec pretium, lacus et finibus venenatis, augue velit pretium erat, lacinia volutpat magna risus eu enim. Etiam lobortis blandit turpis in faucibus.\n        ",
+                      "type": "Text"
+                    }
+                  ],
+                  "type": "Element"
+                },
+                {
+                  "content": "\n    ",
+                  "type": "Text"
+                }
+              ],
+              "type": "Element"
+            },
+            {
+              "content": "\n",
+              "type": "Text"
+            }
+          ],
+          "type": "Element"
+        },
+        {
+          "type": "Text",
+          "content": ""
+        }
+      ],
+      "active": true
+    }
+  ]
+}

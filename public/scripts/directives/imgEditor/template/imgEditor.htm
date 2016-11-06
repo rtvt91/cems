@@ -1,0 +1,41 @@
+
+<div>
+    <canvas class="thumbnail"></canvas>
+    <nav>
+        <button ng-class="{'btn-info':imgEditor.displayable === 'SIZE_ROTATION'}" class="btn btn-sm" ng-click="imgEditor.displayControl('SIZE_ROTATION')">Size Rotation</button>
+        <button ng-class="{'btn-info':imgEditor.displayable === 'RGBA'}" class="btn btn-sm" ng-click="imgEditor.displayControl('RGBA')">Color</button>
+        <button ng-class="{'btn-info':imgEditor.displayable === 'BCHS'}" class="btn btn-sm" ng-click="imgEditor.displayControl('BCHS')">Saturation</button>
+        <button class="btn btn btn-success btn-sm validate" ng-click="imgEditor.saveImg()" ng-disabled="!imgEditor.title || !imgEditor.description">Save</button>
+        <button class="btn btn btn-danger btn-sm cancel" ng-click="imgEditor.cancel()">Cancel</button>
+        <form class="form-inline">
+            <div class="form-group">
+                <input type="text" class="form-control titre" placeholder="Titre" ng-model="imgEditor.title" required>
+                <input type="text" class="form-control description" placeholder="Description" ng-model="imgEditor.description" required>
+            </div>
+        </form>
+    </nav>
+    <ul>
+        <li ng-show="imgEditor.displayable === 'SIZE_ROTATION'">
+            <ul>
+                <li><span>Size</span><slider name="SIZE" begin-at="1" range-start="0" range-end="1"></slider></li>
+                <li><span>Rotation</span><slider name="ROTATION" begin-at="0" range-start="0" range-end="360"></slider></li>
+            </ul>
+        </li>
+        <li ng-show="imgEditor.displayable === 'RGBA'">
+            <ul>
+                <li><span>Red</span><slider name="RED" begin-at="1" range-start="0" range-end="1"></slider></li>
+                <li><span>Blue</span><slider name="BLUE" begin-at="1" range-start="0" range-end="1"></slider></li>
+                <li><span>Green</span><slider name="GREEN" begin-at="1" range-start="0" range-end="1"></slider></li>
+                <li><span>Alpha</span><slider name="ALPHA" begin-at="1" range-start="0" range-end="1"></slider></li>
+            </ul>
+        </li>
+        <li ng-show="imgEditor.displayable === 'BCHS'">
+            <ul>
+                <li><span>Bright</span><slider name="BRIGHT" begin-at="0" range-start="-255" range-end="255"></slider></li>
+                <li><span>Contrast</span><slider name="CONTRAST" begin-at="0" range-start="-100" range-end="100"></slider></li>
+                <li><span>Hue</span><slider name="HUE" begin-at="0" range-start="-180" range-end="180"></slider></li>
+                <li><span>Saturation</span><slider name="SATURATION" begin-at="0" range-start="-100" range-end="100"></slider></li>
+            </ul>
+        </li>
+    </ul>
+</div>

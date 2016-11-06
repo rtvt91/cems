@@ -1,0 +1,133 @@
+<new-article></new-article>
+<section>
+    <article>
+        <div>
+            <h3>Article list</h3>
+            <div class="filter fadeElement" ng-show="articleCtrl.toggle.table.showTable">
+                <select class="form-control" ng-model="articleCtrl.filter.selectedFilter">
+                    <option value="$" ng-selected="true">Any</option>
+                    <option value="compute.h1">Title</option>
+                    <option value="compute.h2">Subtitle</option>
+                    <option value="categoryId.name">Category</option>
+                    <option value="compute.url">Url</option>
+                    <option value="compute.username">User</option>
+                </select>
+                <input type="text" class="form-control" ng-model="articleCtrl.filter.query"/>
+                <div class="radio">
+                    <label class="radio-inline">
+                        <input type="radio" value="" ng-model="articleCtrl.filter.active">All articles
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" value="activated" ng-model="articleCtrl.filter.active"> Published article(s) only
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" value="deactivated" ng-model="articleCtrl.filter.active"> Unpublished article(s) only
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" ng-model="articleCtrl.filter.conflict"/>Conflict url article only
+                    </label>
+                </div>
+            </div>
+            <div class="table-responsive fadeElement" ng-show="articleCtrl.toggle.table.showTable">
+                <table class="table table-condensed">
+                    <thead>
+                        <tr>
+                            <th>Active</th>
+                            <th>Conflict</th>
+                            <th>Title-subtitle</th>
+                            <th>User</th>
+                            <th>Category</th>
+                            <th>Url</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="article in articleCtrl.articles | filter: articleCtrl.configureSelectFilter() | filter:articleCtrl.configureCheckboxFilter('active') | filter:articleCtrl.configureCheckboxFilter('conflict')"
+                            class="repeatAnimation">
+                            <td class="centerTd">
+                                <i class="glyphicon" ng-class="{'glyphicon-eye-open':article.active, 'text-primary':article.active, 'glyphicon-eye-close':!article.active}"</i>
+                            </td>
+                            <td class="centerTd">
+                                <i class="glyphicon" ng-class="{'glyphicon-exclamation-sign':article.conflict, 'text-danger':article.conflict, 'glyphicon-thumbs-up':!article.conflict, 'text-primary':!article.conflict}"</i>
+                            </td>
+                            <td><p><strong ng-bind-html="article.compute.h1"></strong></p><p ng-bind-html="article.compute.h2"></p></td>
+                            <td class="centerTd">{{article.compute.username}}</td>
+                            <td class="centerTd">{{article.categoryId.name}}</td>
+                            <td class="centerTd">{{article.url}}</td>
+                            <td class="centerTd"><button class="btn btn-primary" ng-click="articleCtrl.editArticle($index)">Edit</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div ng-show="!articleCtrl.toggle.table.showTable" class="editedArticle fadeElement">
+                <div>
+                    <div class="alert alert-danger" role="alert" ng-show="articleCtrl.selectedArticle.conflict">
+                        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                        <span class="sr-only">Error:</span>There's one or more article which point to the same url, this will cause a problem for displaying it correctly. <br/>Please change the article's category or url.
+                    </div>
+                    <h4 ng-click="articleCtrl.gotoArticle()" ng-bind-html="articleCtrl.selectedArticle.compute.h1"></h4>
+                    <h5 ng-bind-html="articleCtrl.selectedArticle.compute.h2"></h5>
+                    <div>
+                        <i class="glyphicon glyphicon-calendar"></i> Created the {{articleCtrl.selectedArticle.compute.date | date:'MM/dd/yyyy'}}
+                    </div>
+                    <div>
+                        <i class="glyphicon glyphicon-user"></i> Written by <strong>{{articleCtrl.selectedArticle.compute.username}}</strong>
+                    </div>
+                    <div>
+                        <i class="glyphicon glyphicon-folder-open category"></i> Stored in category : <strong>{{articleCtrl.selectedArticle.categoryId.name}}</strong>
+                        <button class="btn btn-link btn-xs" ng-click="articleCtrl.toggleEditCat()" ng-hide="articleCtrl.toggle.cat.open">
+                            <i class="glyphicon glyphicon-pencil"></i>
+                            Change category
+                        </button>
+                        <form name=catForm ng-model="cat" ng-show="articleCtrl.toggle.cat.open">
+                            <select name="selectedCat"
+                                    ng-options="cat.name for cat in articleCtrl.categories"
+                                    ng-model="articleCtrl.selectedCategory"
+                                    class="form-control category"></select>
+                            <button class="btn btn-primary" ng-click="articleCtrl.changeCategory()">OK</button>
+                        </form>
+                    </div>
+                    <div>
+                        <i class="glyphicon glyphicon-globe"></i> Current URL : <strong>{{articleCtrl.selectedArticle.compute.url}}</strong>
+                        <button class="btn btn-link btn-xs" ng-click="articleCtrl.toggleEditUrl()" ng-hide="articleCtrl.toggle.url.open">
+                            <i class="glyphicon glyphicon-pencil"></i>
+                            <span>Change url</span>
+                        </button>
+                        <form name=urlForm ng-model="cat" ng-show="articleCtrl.toggle.url.open">
+                            {{articleCtrl.selectedArticle.categoryId.name}}/ <input class="form-control" type="text" ng-model="newUrl"/>
+                            <button class="btn btn-primary" ng-click="articleCtrl.changeUrl(newUrl)">OK</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="btns">
+                    <button class="btn btn-primary" ng-click="articleCtrl.gotoArticle()">
+                        <i class="glyphicon glyphicon-globe"></i>
+                        <span>See article</span>
+                    </button>
+                    <button class="btn btn-danger" ng-click="articleCtrl.deletePost(articleCtrl.selectedArticle._id)">
+                        <i class="glyphicon glyphicon-remove"></i>
+                        <span>Delete</span>
+                    </button>
+                    <button ng-show="articleCtrl.user.role === 'ADMIN'" class="btn" ng-class="{'btn-success':!articleCtrl.selectedArticle.active}" ng-click="articleCtrl.activePost(articleCtrl.selectedArticle._id, articleCtrl.selectedArticle.active)">
+                        <i class="glyphicon" ng-class="{'glyphicon-eye-close':articleCtrl.selectedArticle.active, 'glyphicon-eye-open':!articleCtrl.selectedArticle.active}"></i>
+                        <span ng-hide="articleCtrl.selectedArticle.active">Activate this article</span>
+                        <span ng-show="articleCtrl.selectedArticle.active">Deactivate this article</span>
+                    </button>
+                    <button class="btn btn-warning" ng-click="articleCtrl.cancelEdition()">
+                        Close
+                    </button>
+                </div>
+                <div class="help-block" ng-show="articleCtrl.user.role !== 'ADMIN' && !articleCtrl.selectedArticle.active" >
+                    <i class="glyphicon glyphicon-exclamation-sign"></i>
+                    This article is currently deactivated. It is subject to administrator approval.
+                </div>
+            </div>
+            <div class="help-block" ng-show="articleCtrl.articles.length === 0">
+                <i class="glyphicon glyphicon-exclamation-sign"></i>
+                <span>There's currently no article</span>
+            </div>
+        </div>
+    </article>
+</section>

@@ -1,0 +1,47 @@
+/*
+* Animations
+*/
+
+.fadeView{
+    &.ng-enter {
+        transition: 0.5s;
+        opacity: 0;
+    }
+    &.ng-enter-active {
+        opacity: 1;
+    }
+}
+
+.fadeElement {
+  transition: all linear 0.5s;
+}
+.fadeElement.ng-hide {
+  opacity: 0;
+}
+
+.repeatAnimation.ng-enter,
+.repeatAnimation.ng-leave{ 
+    -webkit-transition: 175ms cubic-bezier(0.420, 0.000, 0.580, 1.000) all;
+    -moz-transition: 175ms cubic-bezier(0.420, 0.000, 0.580, 1.000) all;
+    -ms-transition: 175ms cubic-bezier(0.420, 0.000, 0.580, 1.000) all;
+    -o-transition: 175ms cubic-bezier(0.420, 0.000, 0.580, 1.000) all;
+    transition: 175ms cubic-bezier(0.420, 0.000, 0.580, 1.000) all;
+} 
+ 
+.repeatAnimation.ng-enter.ng-enter-active, 
+.repeatAnimation.ng-leave {
+    opacity: 1;
+    top: 0;
+}
+ 
+.repeatAnimation.ng-leave.ng-leave-active,
+.repeatAnimation.ng-enter {
+    opacity: 0;
+    top: -50px;
+    height: 0px;
+}
+
+.fadeElement.ng-hide {
+  transition:0.25s linear all;
+  opacity:0;
+}

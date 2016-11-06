@@ -1,0 +1,28 @@
+<section>
+    <header>
+        <h3>Create a new post</h3>
+    </header>
+    <div class="filter">
+        <form>
+            <span>{{newArticleCtrl.rootUrl}}/</span>
+            <select name="category"
+                    ng-options="cat.name for cat in newArticleCtrl.categories"
+                    ng-model="newArticleCtrl.defaultSelection"
+                    class="form-control">
+            </select>
+            / <input type="text" class="form-control" ng-model="newArticleCtrl.url"/>
+             <span class="help-block">
+                <i class="glyphicon glyphicon-exclamation-sign"></i>
+                Url must contains only letter, number, dash and underscore
+            </span>
+            <button class="btn btn-primary" ng-click="newArticleCtrl.createNewPost()">
+            Create a new Post
+        </button>
+        </form>
+    </div>
+    <div class="alert alert-danger" role="alert" ng-show="newArticleCtrl.alreadyExists">
+        <i class="glyphicon glyphicon-exclamation-sign"></i>
+        A post already exists for this url
+    </div>
+       
+</section>

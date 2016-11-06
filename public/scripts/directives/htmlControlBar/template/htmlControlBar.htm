@@ -1,0 +1,31 @@
+<ul ng-hide="htmlControlBarCtrl.props.toggle">
+    <li>
+        <button type="button" class="btn btn-sm btn-primary" ng-click="htmlControlBarCtrl.toggleControl()">
+            <i class="glyphicon glyphicon-plus"></i>
+            <span>add a new html tag</span>
+        </button>
+    </li>
+    <li>
+        <button type="button" class="btn btn-sm btn-danger" ng-click="htmlControlBarCtrl.removeHTML()">
+            <i class="glyphicon glyphicon-minus"></i>
+            <span>remove this html tag</span>
+        </button>
+    </li>
+    <li>
+        <button type="button" class="btn btn-sm btn-warning" ng-click="htmlControlBarCtrl.closeControl()">
+            <i class="glyphicon glyphicon-remove-sign"></i>
+            Close
+        </button>
+    </li>
+</ul>
+<ul ng-show="htmlControlBarCtrl.props.toggle" class="form-inline">
+    <div class="form-group">
+        <input type="text" class="form-control inline" ng-model="htmlControlBarCtrl.props.htmlTag"/>
+    </div>
+    <button type="button" class="btn btn-sm btn-primary" ng-click="htmlControlBarCtrl.addHTML()">Add</button>
+    <button type="button" class="btn btn-sm btn-danger" ng-click="htmlControlBarCtrl.toggleControl()">Cancel</button>
+    <span class="help-block">
+        <i class="glyphicon glyphicon-exclamation-sign"></i>
+        Only div and h3 tags are currently allowed
+    </span>
+</ul>

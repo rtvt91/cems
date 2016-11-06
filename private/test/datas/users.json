@@ -1,0 +1,31 @@
+{
+  "data": [
+    {
+      "_id": "580fb9266a14531fec19dd3e",
+      "email": "admin@admin.com",
+      "firstname": "John",
+      "lastname": "Doe",
+      "date": "Tue Oct 25 2016 21:57:26 GMT+0200 (Paris, Madrid (heure d’été))",
+      "role": "ADMIN",
+      "active": true
+    },
+    {
+      "_id": "581073265353950b4c99ec56",
+      "email": "mike@johnson.com",
+      "firstname": "Mike",
+      "lastname": "Johnson",
+      "date": "Wed Oct 26 2016 11:11:02 GMT+0200 (Paris, Madrid (heure d’été))",
+      "role": "WRITER",
+      "active": true
+    },
+    {
+      "_id": "581073b514def327dccc3559",
+      "email": "foo@bar.com",
+      "firstname": "Foo",
+      "lastname": "Bar",
+      "date": "Wed Oct 26 2016 11:13:25 GMT+0200 (Paris, Madrid (heure d’été))",
+      "role": "WRITER",
+      "active": true
+    }
+  ]
+}

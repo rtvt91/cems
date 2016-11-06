@@ -1,0 +1,29 @@
+<section>
+    <article>
+        <div>
+            <h3>Category list</h3>
+            <ul>
+                <li ng-repeat="category in categoryListCtrl.list">
+                    <div class="btn-group" data-toggle="buttons">
+                        <label class="btn btn-xs" ng-class="{'btn-info':category.active && category.defaultCat, 'btn-primary':category.active && !category.defaultCat}" ng-click="categoryListCtrl.deleteCategory(category._id)">
+                            <i class="glyphicon glyphicon-remove"></i>
+                        </label>
+                        <label class="btn btn-xs" ng-class="{'btn-info':category.active && category.defaultCat, 'btn-primary':category.active && !category.defaultCat}" ng-click="categoryListCtrl.activeCategory(category._id, category.active)">
+                            <span>{{category.name}}</span>
+                        </label>
+                    </div>
+                </li>
+            </ul>
+            <div>
+                <input type="text" class="form-control" ng-model="categoryListCtrl.catName"/>
+                <button class="btn btn-primary" ng-disabled="!categoryListCtrl.isValid()" ng-click="categoryListCtrl.addCategory()">
+                    <span>Add a category</span>
+                </button>
+                <span class="help-block">
+                    <i class="glyphicon glyphicon-exclamation-sign"></i>
+                    Category name must contains only letter, number, dash and underscore
+                </span>
+            </div>
+        </div>
+    </article>
+</section>
