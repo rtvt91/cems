@@ -5,5 +5,5 @@ A gulp process is provided to launch/reset the application.
 
 # Run the application
 You will need Node, Mongodb installed.
-Clone the cems repository and npm install the dependencies.
+Clone the cems repository, npm install the dependencies, bower install the front dependencies.
 Run the mongod process to start mongodb. Go the cems folder and run gulp in the command line.
