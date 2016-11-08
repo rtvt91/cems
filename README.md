@@ -1,4 +1,4 @@
-## C[E]MS
+# C[E]MS
 A simple content [editable] management system with content-editable text and canvas image modification.
 
 #### The front-end uses:
